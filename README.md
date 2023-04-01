@@ -18,8 +18,8 @@ Features
 
 1. Clone the SSHieldPi repository:
 
-          git clone https://github.com/yourusername/SSHieldPi.git
-
+          git clone https://github.com/PKHarsimran/SSHieldPi-The-Raspberry-Pi-SSH-Protection-Solution.git
+          
 2. Navigate to the SSHieldPi directory:
 
           cd SSHieldPi
