@@ -27,4 +27,19 @@ Features
 3. Make the script executable:
 
           chmod +x sshieldpi.sh
+          
+##Usage
+
+4. Open sshieldpi.sh in a text editor and replace the placeholders for USERNAME and PASSWORD with the desired username and a strong password.
+5. Uncomment the appropriate lines depending on whether you are using a Debian/Ubuntu or CentOS/RHEL system.
+6. Run the script as root or with sudo privileges:
+
+          sudo ./sshieldpi.sh
+
+7. The script will create a new user, grant sudo privileges, and apply the recommended SSH settings. The SSH service will be restarted to apply the changes.
+8. Test the new SSH configuration by logging in with the newly created user and the custom SSH port.
+
+##Contributing
+We welcome contributions to the SSHieldPi project. If you have ideas for improvements, bug fixes, or new features, please feel free to submit a pull request or open an issue.
+
             
