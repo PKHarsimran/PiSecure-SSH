@@ -1,45 +1,60 @@
-**SSHieldPi - The Raspberry Pi SSH Protection Solution**
+# 🔒 Secure SSH Setup Script
 
-SSHieldPi is a powerful and user-friendly bash script tailored to safeguard your Raspberry Pi's SSH access. This script not only helps you create and manage user accounts with sudo privileges, but also fine-tunes your SSH configuration for optimal security. Say goodbye to security loopholes and protect your Raspberry Pi with SSHieldPi.
-Features
+## 📖 Overview
 
-- Add a new user with a custom username and password
-- Grant sudo privileges to the new user
-- Configure SSH settings for increased security
-- Modify SSH port to a custom value
-- Restart the SSH service to apply changes
+The `secure-ssh-setup.sh` script is designed to automate the process of securing an SSH server by performing the following tasks:
+- Adding a new user with a specified username and password.
+- Adding the new user to the appropriate sudo group based on the operating system.
+- Updating the SSH configuration file with security enhancements.
+- Restarting the SSH service to apply the changes.
 
-**Prerequisites**
+## ✨ Features
 
-- Raspberry Pi with Raspbian or a compatible OS
-- Root or sudo access to the Raspberry Pi
+- Adds a new user and sets their password.
+- Adds the user to the `sudo` group (Debian/Ubuntu) or `wheel` group (CentOS/RHEL/Fedora).
+- Updates SSH configuration settings:
+  - `ClientAliveInterval`
+  - `ClientAliveCountMax`
+  - `PermitEmptyPasswords`
+  - `Protocol`
+  - `Port`
+- Restarts the SSH service to apply the new settings.
+- Provides detailed logging for each step.
 
-**Installation**
+## ⚙️ Prerequisites
 
-1. Clone the SSHieldPi repository:
+- A Linux-based system (Debian, Ubuntu, CentOS, RHEL, Fedora).
+- Root or sudo access to run the script.
 
-          git clone https://github.com/PKHarsimran/SSHieldPi-The-Raspberry-Pi-SSH-Protection-Solution.git
-          
-2. Navigate to the SSHieldPi directory:
+## 🚀 Usage
 
-          cd SSHieldPi
+1. **Download the Script:**
 
-3. Make the script executable:
+   Clone the repository or download the `secure-ssh-setup.sh` script to your local machine.
 
-          chmod +x sshieldpi.sh
-          
-**Usage**
+   ```sh
+   git clone https://github.com/PKHarsimran/SSHieldPi-The-Raspberry-Pi-SSH-Protection-Solution.git
+   cd SSHieldPi-The-Raspberry-Pi-SSH-Protection-Solution/scripts
+   ```
 
-4. Open sshieldpi.sh in a text editor and replace the placeholders for USERNAME and PASSWORD with the desired username and a strong password.
-5. Uncomment the appropriate lines depending on whether you are using a Debian/Ubuntu or CentOS/RHEL system.
-6. Run the script as root or with sudo privileges:
+2. **Modify the Script:**
 
-          sudo ./sshieldpi.sh
+   Open the script and update the **USERNAME** and **PASSWORD** variables with your desired values.
 
-7. The script will create a new user, grant sudo privileges, and apply the recommended SSH settings. The SSH service will be restarted to apply the changes.
-8. Test the new SSH configuration by logging in with the newly created user and the custom SSH port.
+   ```sh
+   USERNAME="newuser"
+   PASSWORD="password"
+   ```
 
-**Contributing**
-We welcome contributions to the SSHieldPi project. If you have ideas for improvements, bug fixes, or new features, please feel free to submit a pull request or open an issue.
+3. **Run the Script:**
 
-            
+   Execute the script with root or sudo privileges.
+   
+   ```sh
+   sudo bash secure-ssh-setup.sh
+   ```
+
+## 📜 Logging
+
+The script provides detailed logging at each step to ensure that users are informed of the progress and any potential issues.
+
