@@ -1,0 +1,15 @@
+name: Test Secure SSH Setup Script
+
+on: [push, pull_request]
+
+jobs:
+  test-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Run Secure SSH Setup Script
+      run: |
+        sudo bash scripts/secure-ssh-setup.sh
