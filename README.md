@@ -33,8 +33,8 @@ The `secure-ssh-setup.sh` script is designed to automate the process of securing
    Clone the repository or download the `secure-ssh-setup.sh` script to your local machine.
 
    ```sh
-   git clone https://github.com/PKHarsimran/SSHieldPi-The-Raspberry-Pi-SSH-Protection-Solution.git
-   cd SSHieldPi-The-Raspberry-Pi-SSH-Protection-Solution/scripts
+   git clone https://github.com/PKHarsimran/PiSecure-SSH.git
+   cd PiSecure-SSH/scripts
    ```
 
 2. **Modify the Script:**
